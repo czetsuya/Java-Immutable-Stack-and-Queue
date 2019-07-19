@@ -1,4 +1,4 @@
-# JImmutable Queue
+# Immutable Stack and Queue In Java
 
 Immutable Stack and Queue implementation in Java Programming Language. 
 
