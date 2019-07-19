@@ -1,7 +1,7 @@
 package com.czetsuya.queue;
 
 /**
- * @author Edward P. Legaspi
+ * @author Edward P. Legaspi <czetsuya@gmail.com>
  */
 public class EmptyStackException extends Exception {
 

@@ -1,7 +1,7 @@
 package com.czetsuya.queue;
 
 /**
- * @author Edward P. Legaspi
+ * @author Edward P. Legaspi <czetsuya@gmail.com>
  */
 public final class ImmutableStack<T> implements Stack<T> {
 

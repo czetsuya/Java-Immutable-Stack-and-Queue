@@ -15,7 +15,7 @@ import org.junit.jupiter.api.Test;
  * There are some extra tests that compute the average run time to push and pop
  * 1M and 10M elements.
  * 
- * @author Edward P. Legaspi
+ * @author Edward P. Legaspi <czetsuya@gmail.com>
  */
 public class ImmutableStackTests {
 

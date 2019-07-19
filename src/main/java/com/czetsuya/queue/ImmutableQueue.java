@@ -1,7 +1,7 @@
 package com.czetsuya.queue;
 
 /**
- * @author Edward P. Legaspi
+ * @author Edward P. Legaspi <czetsuya@gmail.com>
  * @param <T>
  */
 public class ImmutableQueue<T> implements Queue<T> {

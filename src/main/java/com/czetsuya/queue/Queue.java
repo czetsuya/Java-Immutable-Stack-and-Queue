@@ -15,7 +15,7 @@ package com.czetsuya.queue;
  * 
  * Invoking deQueue will return 3 or the first element entered.
  * 
- * @author Edward P. Legaspi
+ * @author Edward P. Legaspi <czetsuya@gmail.com>
  */
 public interface Queue<T> {
 

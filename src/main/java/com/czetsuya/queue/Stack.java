@@ -18,7 +18,7 @@ package com.czetsuya.queue;
  * Invoking pop will return 1 or the last element entered.
  * 
  * @param <T> generic type for the elements of the stack
- * @author Edward P. Legaspi
+ * @author Edward P. Legaspi <czetsuya@gmail.com>
  */
 public interface Stack<T> {
 
