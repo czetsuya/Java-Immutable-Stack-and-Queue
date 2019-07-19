@@ -18,9 +18,9 @@ get:
 
 Invoking pop will return 1 or the last element entered.
 
-A Queue is a First In First Out (FIFO) data
-structure. It supports two basic operations called enQueue and deQueue. The
-enQueue operation adds an element at the beginning of the queue, and the
+A Queue is a First In First Out (FIFO) data structure. 
+It supports two basic operations called enQueue and deQueue. 
+The enQueue operation adds an element at the beginning of the queue, and the
 deQueue operation removes an element from the end of the queue.
 
 Example queue of integers: 1, 2, 3. If we queue these integer in order we
@@ -30,4 +30,4 @@ will get:
 1 -> 2 -> 3
 ```
 
-Invoking deQueue will return 3 or the first element entered.tion adds an element at the beginning of the queue, and the deQueue operation removes an element from the end of the queue.
+Invoking deQueue will return 3 or the first element entered.
