@@ -33,15 +33,19 @@ public interface Queue<T> {
 	 * updated queue.
 	 * 
 	 * @return the updated queue after removing the last element
+	 * @throws EmptyQueueException when queue is empty
+	 * @throws EmptyStackException when stack is empty
 	 */
-	public Queue<T> deQueue();
+	public Queue<T> deQueue() throws EmptyQueueException, EmptyStackException;
 
 	/**
 	 * Returns the head or first element of the queue.
 	 * 
 	 * @return first element of the queue
+	 * @throws EmptyQueueException when queue is empty
+	 * @throws EmptyStackException when stack is empty
 	 */
-	public T head();
+	public T head() throws EmptyQueueException, EmptyStackException;
 
 	/**
 	 * Checks if this queue is empty.

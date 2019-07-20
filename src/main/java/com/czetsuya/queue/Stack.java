@@ -38,7 +38,7 @@ public interface Stack<T> {
 	 * @return the updated stack after removing the top element
 	 * @throws EmptyStackException when stack is empty
 	 */
-	public Stack<T> pop() throws Exception;
+	public Stack<T> pop() throws EmptyStackException;
 
 	/**
 	 * Returns the head element or top of the stack.
@@ -46,7 +46,7 @@ public interface Stack<T> {
 	 * @return top element of the stack
 	 * @throws EmptyStackException when stack is empty
 	 */
-	public T head() throws Exception;
+	public T head() throws EmptyStackException;
 
 	/**
 	 * Checks if this stack is empty.

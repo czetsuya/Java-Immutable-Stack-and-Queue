@@ -24,29 +24,71 @@ public class ImmutableStackTests {
 
 	@SuppressWarnings("unchecked")
 	@Test
-	void emptyStack_push_Ok() throws Exception {
-		assertEquals(1, ImmutableStack.emptyStack().push(1).head());
+	void emptyStack_push_ok() throws Exception {
+		assertEquals(1, ImmutableStack.empty().push(1).head());
 	}
 
 	@Test
-	void emptyStack_pop_Ok() throws Exception {
+	void emptyStack_pop_ok() throws Exception {
 
 		assertThrows(EmptyStackException.class, () -> {
-			ImmutableStack.emptyStack().pop();
+			ImmutableStack.empty().pop();
 		});
 	}
 
 	@Test
-	void emptyStack_head_Ok() throws Exception {
+	void emptyStack_head_ok() throws Exception {
 
 		assertThrows(EmptyStackException.class, () -> {
-			ImmutableStack.emptyStack().head();
+			ImmutableStack.empty().head();
 		});
 	}
 
 	@Test
-	void emptyStack_isEmpty_Ok() {
-		assertTrue(ImmutableStack.emptyStack().isEmpty());
+	void emptyStack_isEmpty_ok() {
+		assertTrue(ImmutableStack.empty().isEmpty());
+	}
+
+	@SuppressWarnings("unchecked")
+	@Test
+	void push_from_empty_ok() throws EmptyStackException {
+		
+		Stack<Integer> stack = ImmutableStack.empty();
+		stack = stack.push(1);
+		assertEquals(1, stack.head());
+	}
+
+	@SuppressWarnings("unchecked")
+	@Test
+	void push_from_non_empty_ok() throws EmptyStackException {
+		
+		Stack<Integer> stack = ImmutableStack.empty();
+		stack = stack.push(1);
+		stack = stack.push(2);
+		assertEquals(2, stack.head());
+	}
+
+	@SuppressWarnings("unchecked")
+	@Test
+	void pop_from_non_empty_ok() throws EmptyStackException {
+		
+		Stack<Integer> stack = ImmutableStack.empty();
+		stack = stack.push(1);
+		stack = stack.push(2);
+		stack = stack.pop();
+		assertEquals(1, stack.head());
+	}
+
+	@SuppressWarnings("unchecked")
+	@Test
+	void pop_from_empty_ok() throws EmptyStackException {
+		
+		Stack<Integer> stack = ImmutableStack.empty();
+		stack = stack.push(1);
+		final Stack<Integer> lastStack = stack.pop();
+		assertThrows(EmptyStackException.class, () -> {
+			lastStack.pop();
+		});
 	}
 
 	@SuppressWarnings("unchecked")
@@ -54,7 +96,7 @@ public class ImmutableStackTests {
 	void popAndPush1M_Time() throws Exception {
 
 		Instant start = Instant.now();
-		Stack<Integer> stack = ImmutableStack.emptyStack();
+		Stack<Integer> stack = ImmutableStack.empty();
 
 		for (int i = 1; i < ONE_M; i++) {
 			stack = stack.push(i);
@@ -77,7 +119,7 @@ public class ImmutableStackTests {
 	void popAndPush10M_Time() throws Exception {
 
 		Instant start = Instant.now();
-		Stack<Integer> stack = ImmutableStack.emptyStack();
+		Stack<Integer> stack = ImmutableStack.empty();
 
 		for (int i = 1; i < TEN_M; i++) {
 			stack = stack.push(i);

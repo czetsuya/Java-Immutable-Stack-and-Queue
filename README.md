@@ -31,3 +31,11 @@ will get:
 ```
 
 Invoking deQueue will return 3 or the first element entered.
+
+These project contains tests for both stack and queue.
+
+To run the test execute:
+
+```sh
+mvn test
+```

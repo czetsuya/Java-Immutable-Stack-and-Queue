@@ -1,7 +1,11 @@
 package com.czetsuya.queue;
 
 /**
+ * A concrete class that represents an Immutable Stack.
+ * 
  * @author Edward P. Legaspi <czetsuya@gmail.com>
+ * @param <T> generic type for elements of Stack
+ * @see Stack
  */
 public final class ImmutableStack<T> implements Stack<T> {
 
@@ -14,30 +18,38 @@ public final class ImmutableStack<T> implements Stack<T> {
 	}
 
 	@Override
-	public Stack<T> push(T e) {
+	public final Stack<T> push(T e) {
 		return new ImmutableStack<>(e, this);
 	}
 
 	@Override
-	public Stack<T> pop() {
+	public final Stack<T> pop() {
 		return tail;
 	}
 
 	@Override
-	public T head() {
+	public final T head() {
 		return value;
 	}
 
 	@Override
-	public boolean isEmpty() {
+	public final boolean isEmpty() {
 		return false;
 	}
 
 	@SuppressWarnings("rawtypes")
-	public static final Stack emptyStack() {
+	public static final Stack empty() {
 		return EmptyStack.getInstance();
 	}
 
+	/**
+	 * A singleton class that represents an empty Stack.
+	 * 
+	 * @author Edward P. Legaspi <czetsuya@gmail.com>
+	 *
+	 * @param <T> generic type for elements of Stack
+	 * @see Stack
+	 */
 	private static final class EmptyStack<T> implements Stack<T> {
 
 		@SuppressWarnings("rawtypes")
@@ -49,22 +61,22 @@ public final class ImmutableStack<T> implements Stack<T> {
 		}
 
 		@Override
-		public Stack<T> push(T e) {
+		public final Stack<T> push(T e) {
 			return new ImmutableStack<>(e, this);
 		}
 
 		@Override
-		public Stack<T> pop() throws Exception {
+		public final Stack<T> pop() throws EmptyStackException {
 			throw new EmptyStackException();
 		}
 
 		@Override
-		public T head() throws Exception {
+		public final T head() throws EmptyStackException {
 			throw new EmptyStackException();
 		}
 
 		@Override
-		public boolean isEmpty() {
+		public final boolean isEmpty() {
 			return true;
 		}
 	}

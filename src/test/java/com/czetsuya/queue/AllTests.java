@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
  * Unit test for simple App.
  */
 @RunWith(JUnitPlatform.class)
-@SelectClasses({ ImmutableStackTests.class })
+@SelectClasses({ ImmutableStackTests.class, ImmutableQueue.class })
 public class AllTests {
 
 }
