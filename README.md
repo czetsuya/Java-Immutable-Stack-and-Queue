@@ -7,7 +7,7 @@ structure. It supports two basic operations called push and pop. The push
 operation adds an element at the top of the stack, and the pop operation
 removes an element from the top of the stack.
 
-Example stack of integers: 1, 2, 3. If we push these integer in order we will
+Example stack of integers: 1, 2, 3. If we push these integers in order, we will
 get:
 
 ```sh
@@ -23,7 +23,7 @@ It supports two basic operations called enQueue and deQueue.
 The enQueue operation adds an element at the beginning of the queue, and the
 deQueue operation removes an element from the end of the queue.
 
-Example queue of integers: 1, 2, 3. If we queue these integer in order we
+Example queue of integers: 1, 2, 3. If we queue these integers in order, we
 will get:
 
 ```sh
@@ -32,7 +32,7 @@ will get:
 
 Invoking deQueue will return 3 or the first element entered.
 
-These project contains tests for both stack and queue.
+This project contains tests for both stack and queue.
 
 To run the test execute:
 
